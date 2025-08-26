@@ -21,7 +21,7 @@ namespace ExpiryFoodTGBot.Handler
             _productService = productService;
             _messageService = messageService;
         }
-        public async Task HandleNonIdleState(ChatId chatId, string message)
+        public async Task HandleEditState(ChatId chatId, string message)
         {
             switch (message)
             {
@@ -48,7 +48,7 @@ namespace ExpiryFoodTGBot.Handler
                             break;
                     }
                     _userService.UpdateUserState(chatId, CurrentState.Idle);
-                    _userService.UpdateProduct(chatId, new());
+                    _userService.UpdateProduct(chatId, null);
                     _messageService.SendMainMenu(chatId);
                     break;
                 default:

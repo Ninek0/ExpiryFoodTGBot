@@ -93,7 +93,7 @@ namespace ExpiryFoodTGBot
                     _ = idleHandler.HandleIdleState(chatId, message.Text);
                     break;
                 default:
-                    _ = editingHandler.HandleNonIdleState(chatId, message.Text);
+                    _ = editingHandler.HandleEditState(chatId, message.Text);
                     break;
             }
             return Task.CompletedTask;

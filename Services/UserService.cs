@@ -20,7 +20,7 @@ namespace ExpiryFoodTGBot.Services
             => GetOrCreateUser(chatId).currentState = newState;
         public CurrentState GetState(ChatId chatId)
             => GetOrCreateUser(chatId).currentState;
-        public void UpdateProduct(ChatId chatId, ProductModel product)
+        public void UpdateProduct(ChatId chatId, ProductModel? product)
             => GetOrCreateUser(chatId).currentProduct = product;
         public ProductModel? GetProduct(ChatId chatId)
             => GetOrCreateUser(chatId).currentProduct;
