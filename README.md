@@ -49,6 +49,7 @@
    cp appsettings.example.json appsettings.json
    ```
    ### Пример настроек  
+   ```
    {
      "BotConfig": {
         "BotToken": "YOUR_TELEGRAM_BOT_TOKEN"
@@ -57,6 +58,7 @@
         "BaseUrl": "YOUR_API_BASE_URL"
      }
    }
+   ```
 3. **Запусти бота**
    ```bash
    dotnet run
