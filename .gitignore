@@ -363,4 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Bot settings
-Settings/appsettings
+Settings/appsettings.json
