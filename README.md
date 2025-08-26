@@ -103,7 +103,7 @@ ExpiryFoodTGBot/
 
 ### 👨‍💻 Автор
 
-tg: @Ninek0
+tg: [@Ninek0](https://t.me/Ninek0)
 
 💡 Нашли баг?
 🚀 Есть идея?
