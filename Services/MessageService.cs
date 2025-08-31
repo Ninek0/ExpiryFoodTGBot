@@ -30,17 +30,13 @@ namespace ExpiryFoodTGBot.Services
         {
             await _botClient.DeleteMessage(chatId, messageId);
         }
-        public async Task SendEditableProductMessage(ChatId chatId, ProductModel? product)
+        public async Task SendEditableProductMessage(ChatId chatId, ProductModel product)
         {
             var messageText = "";
-            if (product == null)
-                messageText = $"📦 *Отсутствует*\n" +
-                              $"📝: Отсутствует\n" +
-                              $"📅: Не указано";
-            else
-                messageText = $"📦 *{product.Name}*\n" +
-                              $"📝: {product.Description}\n" +
-                              $"📅: {product.ExpireAt:dd.MM.yyyy}";
+            
+            messageText = product.Name == null ? messageText += $"📦: *Отсутствует*\n" : messageText += $"📦: *{product.Name}*\n";
+            messageText = product.Description == null ? messageText += $"📝: Отсутствует\n" : messageText += $"📝: {product.Description}\n";
+            messageText = product.ExpireAt == new DateTime() ? messageText += $"📅: Не указано" : messageText += $"📅: {product.ExpireAt:dd.MM.yyyy}";
 
             await _botClient.SendMessage(
                 chatId: chatId,

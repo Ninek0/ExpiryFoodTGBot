@@ -22,6 +22,6 @@ namespace ExpiryFoodTGBot.Models
     {
         public CurrentState currentState = CurrentState.Idle;
         public ProductFields productFields { get; set; }
-        public ProductModel? currentProduct = null;
+        public ProductModel currentProduct = new ProductModel();
     }
 }
